@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <servlet>
+        <servlet-name>AccountServlet</servlet-name>
+        <servlet-class>wa2.servlets.AccountServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AccountServlet</servlet-name>
+        <url-pattern>/account</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddressServlet</servlet-name>
+        <servlet-class>wa2.servlets.AddressServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddressServlet</servlet-name>
+        <url-pattern>/address</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ClientServlet</servlet-name>
+        <servlet-class>wa2.servlets.ClientServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ClientServlet</servlet-name>
+        <url-pattern>/client</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CreditServlet</servlet-name>
+        <servlet-class>wa2.servlets.CreditServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreditServlet</servlet-name>
+        <url-pattern>/credit</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>EmployeeServlet</servlet-name>
+        <servlet-class>wa2.servlets.EmployeeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>EmployeeServlet</servlet-name>
+        <url-pattern>/employee</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MortgageServlet</servlet-name>
+        <servlet-class>wa2.servlets.MortgageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MortgageServlet</servlet-name>
+        <url-pattern>/mortgage</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AllClientsServlet</servlet-name>
+        <servlet-class>wa2.servlets.AllClientsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AllClientsServlet</servlet-name>
+        <url-pattern>/allclients</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AllEmployeesServlet</servlet-name>
+        <servlet-class>wa2.servlets.AllEmployeesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AllEmployeesServlet</servlet-name>
+        <url-pattern>/allemployees</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PersonAccountServlet</servlet-name>
+        <servlet-class>wa2.servlets.PersonAccountServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PersonAccountServlet</servlet-name>
+        <url-pattern>/personaccount</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AccountMortgageServlet</servlet-name>
+        <servlet-class>wa2.servlets.AccountMortgageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AccountMortgageServlet</servlet-name>
+        <url-pattern>/accountmortgage</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AccountCreditServlet</servlet-name>
+        <servlet-class>wa2.servlets.AccountCreditServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AccountCreditServlet</servlet-name>
+        <url-pattern>/accountcredit</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CalculationServlet</servlet-name>
+        <servlet-class>wa2.servlets.CalculationServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CalculationServlet</servlet-name>
+        <url-pattern>/calculation</url-pattern>
+    </servlet-mapping>
+</web-app>

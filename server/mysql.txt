@@ -1,0 +1,73 @@
+CREATE TABLE IF NOT EXISTS `person` (
+ `idperson` INT NOT NULL AUTO_INCREMENT ,
+ `firstname` VARCHAR(45) NOT NULL ,
+ `lastname` VARCHAR(45) NOT NULL ,
+ `birth` VARCHAR(45) NOT NULL ,
+ PRIMARY KEY (`idperson`) )
+ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `address` (
+ `idaddress` INT NOT NULL AUTO_INCREMENT ,
+ `street` VARCHAR(45) NOT NULL ,
+ `city` VARCHAR(45) NOT NULL ,
+  `postal` INT NOT NULL ,
+ PRIMARY KEY (`idaddress`) )
+ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `person_address` (
+ `person_idperson` INT NOT NULL ,
+ `address_idaddress` INT NOT NULL ,
+ PRIMARY KEY (`person_idperson`, `address_idaddress`) ,
+ INDEX `fk_person has adress_person1` (`person_idperson` ASC) ,
+ INDEX `fk_person has adress_address1` (`address_idaddress` ASC) ,
+ CONSTRAINT `fk_person has adress_person1`
+ FOREIGN KEY (`person_idperson` )
+ REFERENCES `person` (`idperson` ),
+ CONSTRAINT `fk_person has adress_address1`
+ FOREIGN KEY (`address_idaddress` )
+ REFERENCES `address` (`idaddress` ))
+ENGINE = InnoDB;
+
+CREATE  TABLE IF NOT EXISTS `account` (
+   `idaccount` INT NOT NULL AUTO_INCREMENT ,
+   `number` INT NOT NULL , 
+   `person` INT NOT NULL , 
+   `balance` INT NULL ,
+   `currency` VARCHAR(5) NULL ,
+   PRIMARY KEY (`idaccount`) ,
+   INDEX `fk_person_account` (`person` ASC) ,
+   CONSTRAINT `fk_person_account`
+     FOREIGN KEY (`person` )
+     REFERENCES `person` (`idperson` ))
+ENGINE = InnoDB;
+
+CREATE  TABLE IF NOT EXISTS `credit` (
+   `idcredit` INT NOT NULL AUTO_INCREMENT ,
+   `account` INT NOT NULL , 
+   `value` INT NULL ,
+   `percentage`INT NULL ,
+   PRIMARY KEY (`idcredit`) ,
+   INDEX `fk_account_credit` (`account` ASC) ,
+   CONSTRAINT `fk_account_credit`
+     FOREIGN KEY (`account` )
+     REFERENCES `account` (`idaccount` ))
+ENGINE = InnoDB;
+
+CREATE  TABLE IF NOT EXISTS `mortgage` (
+   `idmortgage` INT NOT NULL AUTO_INCREMENT ,
+   `account` INT NOT NULL , 
+   `value` INT NULL ,
+   `years`INT NULL ,
+   PRIMARY KEY (`idmortgage`) ,
+   INDEX `fk_account_mortgage` (`account` ASC) ,
+   CONSTRAINT `fk_account_mortgage`
+     FOREIGN KEY (`account` )
+     REFERENCES `account` (`idaccount` ))
+ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `calculation` (
+ `idcalculation` INT NOT NULL AUTO_INCREMENT ,
+ `uuid` VARCHAR(55) NOT NULL ,
+ `result` INT NOT NULL ,
+ PRIMARY KEY (`idcalculation`) )
+ENGINE = InnoDB;

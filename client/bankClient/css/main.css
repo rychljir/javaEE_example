@@ -1,0 +1,45 @@
+body {
+  padding-top: 50px;
+}
+
+.container {
+	background: white;
+}
+
+.tab-content {
+	width: 100%;
+  	padding: 60px 15px;
+}
+
+.small-btn {
+	font-size: 10px;
+	color: gray;
+}
+
+.update_button, .delete_button, .change_state_button {
+	cursor: pointer;
+}
+
+#errorMsg {
+	font-weight: bold;
+	color: #990000;
+}
+
+th {
+	cursor: pointer;
+}
+
+@media (min-width: 768px) {
+	form {
+		width: 50%;
+	}
+}
+
+.ajax-loader {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -40px;
+	margin-top: -40px;
+    visibility: hidden;
+}
